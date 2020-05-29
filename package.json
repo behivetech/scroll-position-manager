@@ -1,0 +1,83 @@
+{
+    "name": "@bruqui/scroll-position-manager",
+    "version": "1.0.0",
+    "description": "Store and set a scroll position on components that unmount then mount again. This is useful for cases where components are used in something like a Route component from react-router or a scrolling nav bar that changes pages in a library like Gatsby or NextJS. By using a React hook and context, the component will set it's scroll position in the React provider when it unmounts. If the component remounts, it will go back to its saved scroll position. The provider component must be rendered at a higher level in the application where it will not be unmounted.",
+    "keywords": [
+        "React",
+        "scrolling",
+        "scroll",
+        "hook",
+        "context",
+        "provider",
+        "typescript"
+    ],
+    "author": "bruqui",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/bruqui/scroll-position-manager.git"
+    },
+    "bugs": {
+        "url": "https://github.com/bruqui/scroll-position-manager/issues"
+    },
+    "homepage": "https://github.com/bruqui/scroll-position-manager#readme",
+    "main": "dist/index.js",
+    "module": "dist/index.es.js",
+    "files": [
+        "dist"
+    ],
+    "engines": {
+        "node": ">=10"
+    },
+    "scripts": {
+        "start": "rollup -cw",
+        "build": "rollup -c",
+        "test": "jest",
+        "test:watch": "jest --watch"
+    },
+    "peerDependencies": {
+        "react": ">=16.8.0",
+        "react-dom": ">=16.8.0"
+    },
+    "lint-staged": {
+        "*.{js,ts,tsx}": [
+            "eslint --fix"
+        ]
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "devDependencies": {
+        "@babel/core": "^7.10.1",
+        "@rollup/plugin-commonjs": "^12.0.0",
+        "@rollup/plugin-node-resolve": "^8.0.0",
+        "@testing-library/jest-dom": "^5.9.0",
+        "@testing-library/react": "^10.0.4",
+        "@types/jest": "^25.2.3",
+        "@types/react": "^16.9.35",
+        "@types/react-dom": "^16.9.8",
+        "@typescript-eslint/eslint-plugin": "^3.0.2",
+        "@typescript-eslint/parser": "^3.0.2",
+        "babel-preset-react-app": "^9.1.2",
+        "eslint": "^7.1.0",
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-plugin-prettier": "^3.1.3",
+        "eslint-plugin-react": "^7.20.0",
+        "husky": "^4.2.5",
+        "identity-obj-proxy": "^3.0.0",
+        "jest": "^26.0.1",
+        "lint-staged": "^10.2.7",
+        "prettier": "^2.0.5",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "rollup": "^2.11.2",
+        "rollup-plugin-copy": "^3.3.0",
+        "rollup-plugin-peer-deps-external": "^2.2.2",
+        "rollup-plugin-typescript2": "^0.27.1",
+        "ts-jest": "^26.0.0",
+        "tslib": "^2.0.0",
+        "typescript": "^3.9.3"
+    }
+}
